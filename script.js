@@ -1,14 +1,19 @@
 //your JS code here. If required.
 
 let year =2004;
+function daysInYear(year) {
+    if (year % 400 === 0) {
+        return 366;
+    }
 
-function daysOfAYear(year) {
-	if (year%400===0 && year % 100 === 0 && year % 4 === 0 ) {
-		console.log("365")
-		
-	} else {
-		console.log("366")
-		
-	}
-	
+    if (year % 100 === 0) {
+        return 365;
+    }
+
+    if (year % 4 === 0) {
+        return 366;
+    }
+
+    return 365;
+}
 }
